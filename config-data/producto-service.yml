@@ -6,7 +6,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://faswebapp.database.windows.net:1433;database=FAS_WebApp;user=adminfas@faswebapp;password=12.samirsoft.34;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    url: jdbc:sqlserver://faswebapp.database.windows.net:1433;database=FAS_WebApp;user=adminfas@faswebapp;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: adminfas
+    password: 12.samirsoft.34
   jpa:
     hibernate:
       ddl-auto: create-drop
