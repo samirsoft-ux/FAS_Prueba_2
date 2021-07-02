@@ -4,20 +4,14 @@ server:
     include-message: always
     include-binding-errors: always
 spring:
-  h2:
-    console:
-      enabled: true
   datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:~/data/productoDB;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    platform: h2
-    username: sa
-    password: admin
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://faswebapp.database.windows.net:1433;database=FAS_WebApp;user=adminfas@faswebapp;password=12.samirsoft.34;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     show-sql: true
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.SQLServerDialect
     properties:
       hibernate:
         show_sql: true
